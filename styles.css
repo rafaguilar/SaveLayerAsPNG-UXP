@@ -173,7 +173,7 @@ section h4 {
 .options-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start; /* Changed from space-between */
     gap: 8px;
     flex-wrap: wrap;
 }
