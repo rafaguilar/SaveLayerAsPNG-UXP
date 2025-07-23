@@ -12,7 +12,7 @@
             <h1>Layer Export</h1>
             <p>Export individual layers as PNG files</p>
         </header>
-        
+
         <main class="main-content">
             <!-- Document Status -->
             <section class="status-section" id="documentStatus">
@@ -21,31 +21,31 @@
                     <span id="statusText">Checking document...</span>
                 </div>
             </section>
-            
+
             <!-- Layer Search Section -->
             <section class="search-section">
                 <div class="input-group">
                     <label for="layerName">Layer Name:</label>
                     <input type="text" id="layerName" placeholder="Enter layer name..." />
                 </div>
-                
+
                 <div class="options-row">
                     <label class="checkbox-label">
                         <input type="checkbox" id="exactMatch" />
                         <span class="checkmark"></span>
                         Exact match
                     </label>
-                    
+
                     <button id="findLayers" class="btn btn-primary">Find Layers</button>
                 </div>
             </section>
-            
+
             <!-- Layer Selection Section -->
             <section class="selection-section" id="selectionSection" style="display: none;">
                 <h3>Found Layers (<span id="layerCount">0</span>):</h3>
                 <div id="layerList" class="layer-list"></div>
             </section>
-            
+
             <!-- Export Options Section -->
             <section class="export-section">
                 <div class="input-group">
@@ -55,13 +55,13 @@
                         <button id="browsePath" class="btn btn-small">Browse</button>
                     </div>
                 </div>
-                
+
                 <div class="options-grid">
                     <div class="input-group">
                         <label for="filePrefix">File Prefix:</label>
                         <input type="text" id="filePrefix" placeholder="optional_" />
                     </div>
-                    
+
                     <div class="input-group">
                         <label for="compressionLevel">PNG Quality:</label>
                         <select id="compressionLevel">
@@ -70,15 +70,30 @@
                             <option value="9">Best (Smallest)</option>
                         </select>
                     </div>
+
+                    <div class="input-group">
+                         <label>Export Size:</label>
+                         <div class="radio-group">
+                             <label class="radio-label">
+                                 <input type="radio" name="exportSize" value="1" checked>
+                                 <span class="radio-checkmark"></span> 1x
+                             </label>
+                             <label class="radio-label">
+                                 <input type="radio" name="exportSize" value="2">
+                                 <span class="radio-checkmark"></span> 2x
+                             </label>
+                         </div>
+                     </div>
+
                 </div>
-                
+
                 <div class="options-row">
                     <label class="checkbox-label">
                         <input type="checkbox" id="trimTransparent" checked />
                         <span class="checkmark"></span>
                         Trim transparent pixels
                     </label>
-                    
+
                     <label class="checkbox-label">
                         <input type="checkbox" id="showInFinder" checked />
                         <span class="checkmark"></span>
@@ -86,7 +101,7 @@
                     </label>
                 </div>
             </section>
-            
+
             <!-- Action Buttons -->
             <section class="actions">
                 <button id="exportSelected" class="btn btn-primary" disabled>
@@ -98,7 +113,7 @@
                     Export All Found Layers
                 </button>
             </section>
-            
+
             <!-- Progress Section -->
             <section class="progress-section" id="progressSection" style="display: none;">
                 <div class="progress-header">
@@ -114,7 +129,7 @@
                 </div>
             </section>
         </main>
-        
+
         <!-- Status Log -->
         <footer class="log-section">
             <div class="log-header">
@@ -124,7 +139,7 @@
             <div id="statusLog" class="status-log"></div>
         </footer>
     </div>
-    
+
     <script src="main.js"></script>
 </body>
 </html>
